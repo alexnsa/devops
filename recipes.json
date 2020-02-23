@@ -1,36 +1,51 @@
-[
-	{	"ID": "1",
+[{
 		"Name": "Thai Green Chicken Curry",
-		"Image": "9",
-		"Ingredients": "apt",
-		"Method": "SPI",
+		"Image": "https://assets.epicurious.com/photos/59d3b2516a58986c6a4f46cc/6:4/w_620%2Ch_413/thai-green-chicken-curry-recipe-1003.jpg",
+		"Ingredients": [
+			"INGREDIENTS: 500g chicken thighs, 500g jasmine rice, 250g Thai green curry paste, 500ml coconut milk, 1 red pepper, 1 can of bamboo shoots"
+		],
+		"Method": [
+			"Fry the chicken thighs in Thai green paste, boil the coconut milk together with the thai green curry paste. Boil the rice and serve with the chicken and vegetables."
+		]
 	},
 	{
-		"ID": "2",
-		"Name": "Lentil, Apple, Turkey and Chicken Wrap",
-		"Version": "17.10",
-		"Install": "apt",
-		"Owner": "Canonical",
-		"Kernel": "4.13"
+		"Name": "Lentil, Apple, and Turkey Wrap",
+		"Image": "https://assets.epicurious.com/photos/551b0595e7851a541a30b23f/6:4/w_620%2Ch_413/239173_lentil-apple-and-turkey-wrap_6 x4.jpg",
+		"Ingredients": [
+			"INGREDIENTS: medium sized apple, 1 onion, 1 lemon, 500g red lentils, 500g turkey thighs, salt, pepper, paprika"
+		],
+		"Method": [
+			"Season and bake the turkey thighs for 1 hour, and boil the lentils for 30 minutes. Slice the apples, and put them together with the drained lentils, onion, turkey and lemon."
+		]
 	},
 	{
-		"Name": "Fedora",
-		"Version": "26",
-		"Install": "dnf",
-		"Owner": "Red Hat",
-		"Kernel": "4.13"
+		"Name": "Vietnamese Pork Meatball Bahn Mi Fried Rice",
+		"Image": "https://assets.epicurious.com/photos/5d7a5275a328680008bcabdb/6:4/w_620%2Ch_413/Fried%20Rice_66_Audrey%20Kelly.jpg",
+		"Ingredients": [
+			"INGREDIENTS: 500g Pork Meatballs, 500g rice, 1 onion, 1 garlic bulb, pak choi, salt, pepper, soy sauce"
+		],
+		"Method": [
+			"Fry the meatballs in your soy sauce, onions and garlic. Boil then fry the rice and serve together with the pak choi."
+		]
 	},
 	{
-		"Name": "CentOS",
-		"Version": "7",
-		"Install": "yum",
-		"Owner": "Red Hat",
-		"Kernel": "3.10"
+		"Name": "Greek Salad",
+		"Image": "https://assets.epicurious.com/photos/5d37705dc490cc0008d3b6f5/6:4/w_620%2Ch_413/new-and-improved-greek-salad-recipe-BA-062319.jpg",
+		"Ingredients": [
+			"INGREDIENTS: 1 cucumber, 1 green pepper, 1 onion, 1 block of feta cheese, 200g tomatoes, salad dressing"
+		],
+		"Method": [
+			"Roughly chop the tomatoes, onions, peppers and feta cheese and mix it together with the cucumber and dressing."
+		]
 	},
 	{
-		"Name": "OpenSUSE",
-		"Version": "42.3",
-		"Install": "zypper",
-		"Owner": "Novell",
-		"Kernel": "4.4"
-	},
+		"Name": "Easy Chickpea Hummus",
+		"Image": "https://assets.epicurious.com/photos/5b589185ef515b603bc72fdb/6:4/w_620%2Ch_413/Hummus-Bowls-with-Beef-and-Tomatoes-recipe-2-11072018.jpg",
+		"Ingredients": [
+			"INGREDIENTS: 1 Can of chickpeas, garlic, lemon juice, tahini, salt, paprika, olive oil"
+		],
+		"Method": [
+			"Blend the chickpeas with garlic, lemon juice, tahini and salt. Serve with a dash of olive oil and paprika to garnish."
+		]
+	}
+]

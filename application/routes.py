@@ -1,7 +1,7 @@
 from flask import render_template, redirect, url_for, request
 from application import app, bcrypt, db
 from application.forms import RegistrationForm, LoginForm, UpdateAccountForm
-from application.models import Users, Recipe
+from application.models import Users, Recipe, Favourites
 from flask_login import login_user, current_user, logout_user, login_required
 import random
 
@@ -10,9 +10,8 @@ import random
 def home():
         return render_template('home.html', title='Home')
 
-@app.route('/about')
-def about():
-    return render_template('about.html', title='About')
+
+# =============== Account routes =============== #
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -30,6 +29,62 @@ def register():
         return redirect(url_for('home'))
     return render_template('register.html', title='Register', form=form)
 
+
+@app.route('/account', methods=['GET', 'POST'])
+@login_required
+def account():
+    form = UpdateAccountForm()
+    if form.validate_on_submit():
+        current_user.first_name = form.first_name.data
+        current_user.last_name = form.last_name.data
+        current_user.email = form.email.data
+        db.session.commit()
+        return redirect(url_for('account'))
+    elif request.method == 'GET':
+        form.first_name.data = current_user.first_name
+        form.last_name.data = current_user.last_name
+        form.email.data = current_user.email
+    return render_template('account.html', title='Account', form=form)
+
+
+
+@login_required
+@app.route("/account/updated", methods=['GET'])
+def account_updated():
+    return render_template("updatesuccess.html")
+
+@app.route("/account/delete", methods=["GET", "POST"])
+@login_required
+def account_delete():
+    user = current_user.id
+    account = Users.query.filter_by(id=user).first()
+    logout_user()
+    db.session.delete(account)
+    db.session.commit()
+    return redirect(url_for('register'))
+
+
+@app.route("/account/favourites", methods=["GET", "POST"])
+@login_required
+def account_favourites():
+    favourites = Favourites.query.filter_by(user_id=current_user.id).all()
+    recipes = []
+    for favourite in favourites:
+        recipe = Recipe.query.filter_by(id=favourite.recipe_id).first()
+        recipes.append(recipe)
+
+    return render_template('recipepage.html', recipe_list=recipes, favourite_page=True)
+
+@app.route('/account/favourite/delete/<id>')
+@login_required
+def delete_favourite_by_id(id):
+	fav = Favourites.query.filter_by(recipe_id=id).all()
+	for favourite in fav:
+		recipe = Recipe.query.filter_by(id=favourite.recipe_id).first()
+		if current_user.id:
+			db.session.delete(favourite)
+	db.session.commit()
+	return redirect(url_for('account_favourites'))
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
@@ -53,48 +108,30 @@ def logout():
     logout_user()
     return redirect(url_for('home'))
 
+
+
+# =============== Recipe routes =============== #
+
 @login_required
 @app.route("/recipe")
 def recipe():
-    recipe=Recipe(title="test")
-    return render_template('recipe1.html', title='recipe', recipe=recipe)
+    recipe_list = Recipe.query.all()
+    print(recipe_list)
+    return render_template('recipepage.html', name='recipe', recipe_list=recipe_list)
 
 @login_required
 @app.route("/recipe/random")
 def randomRecipe():
     recipe_list = Recipe.query.all()
-    return render_template("recipe1.html", recipe=random.choice(recipe_list))
+    return render_template("recipepage.html", recipe_list=[random.choice(recipe_list)])
 
 @login_required
-@app.route("/account", methods=['GET', 'POST'])
-def account():
-    form = UpdateAccountForm()
-    if form.validate_on_submit():
-        current_user.first_name = form.first_name.data
-        current_user.last_name = form.last_name.data
-        current_user.email = form.email.data
-        current_user.password = bcrypt.generate_password_hash(form.password.data)
+@app.route("/recipe/addtofavourites/<recipe_id>")
+def favouriteRecipe(recipe_id):
+	fave_recipe=Recipe.query.filter_by(id=recipe_id).first()
+	if fave_recipe:
+            favourite = Favourites( recipe_id=fave_recipe.id, user_id=current_user.id, image=fave_recipe.image, name=fave_recipe.name)
+            db.session.add(favourite)
+            db.session.commit()
+	return redirect(url_for('recipe'))
 
-        db.session.add(current_user)
-        db.session.commit()
-        return redirect(url_for('account_updated'))
-    elif request.method == 'GET':
-        form.first_name.data = current_user.first_name
-        form.last_name.data = current_user.last_name
-        form.email.data = current_user.email
-    return render_template('account.html', title='Account', form=form)
-
-@login_required
-@app.route("/account/updated", methods=['GET'])
-def account_updated():
-    return render_template("updatesuccess.html")
-
-@app.route("/account/delete", methods=["GET", "POST"])
-@login_required
-def account_delete():
-    user = current_user.id
-    account = Users.query.filter_by(id=user).first()
-    logout_user()
-    db.session.delete(account)
-    db.session.commit()
-    return redirect(url_for('register'))
