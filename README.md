@@ -14,7 +14,7 @@
 <p>The Jenkins CI Server was used to automate the test and build process. I made sure the app was working before trying the deployment to save time in potential errors.</p>
 
 <h1>Technologies/Tools Used</h1>
-<a href="https://www.w3schools.com/html/">Trello</a>
+<p><a href="https://www.w3schools.com/html/">Trello</a></p>
 <p>Google Cloud Platform</p>
 <p>MySQL</p>
 <p>Python</p>
@@ -22,8 +22,7 @@
 <p>Git - VCS</p>
 
 <h1>Future Improvements</h1>
-<p>Make sure all user account info is deleted along with the user account. This ensures that minimal space is taken up on the database.</p>
-<p><Promote better user security - include ability and prompt for user to make their password more secure by requiring use of upper case and lower case characters, and number/special characters when creating their password.</p>
+<p>In coming updates, I would like to make sure all user account info is deleted along with the user account. This ensures that minimal space is taken up on the database. I would also like to promote better user security - requiring the user to make their password more secure by requiring use of upper case and lower case characters, and number/special characters when creating their password.</p>
 
 <h1>Alexandra Akrong</h1>
 
