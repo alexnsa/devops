@@ -29,16 +29,6 @@
 		]
 	},
 	{
-		"Name": "Greek Salad",
-		"Image": "https://assets.epicurious.com/photos/5d37705dc490cc0008d3b6f5/6:4/w_620%2Ch_413/new-and-improved-greek-salad-recipe-BA-062319.jpg",
-		"Ingredients": [
-			"INGREDIENTS: 1 cucumber, 1 green pepper, 1 onion, 1 block of feta cheese, 200g tomatoes, salad dressing"
-		],
-		"Method": [
-			"Roughly chop the tomatoes, onions, peppers and feta cheese and mix it together with the cucumber and dressing."
-		]
-	},
-	{
 		"Name": "Easy Chickpea Hummus",
 		"Image": "https://assets.epicurious.com/photos/5b589185ef515b603bc72fdb/6:4/w_620%2Ch_413/Hummus-Bowls-with-Beef-and-Tomatoes-recipe-2-11072018.jpg",
 		"Ingredients": [

@@ -4,16 +4,22 @@
 <div>
 	<h2>{{ recipe.name }}</h2>
 	<img src='{{ recipe.image }}'/>
+	<br>
+	<br>
 	<p>{{ recipe.ingredients }}</p>	
         <p>{{ recipe.method }}</p>
     {% if not favourite_page %}
 	<form action="{{ url_for('favouriteRecipe',recipe_id=recipe.id) }}">
         <button type="submit">Add to favourites</button>
     </form>
+    <br>
+    <br>
     {% else %}
 	<form action="{{ url_for('delete_favourite_by_id',id=recipe.id) }}">
         <button type="submit">Delete from Favourites</button>
     </form>
+    <br>
+    <br>
     {% endif %}
 </div>
 {% endfor %}

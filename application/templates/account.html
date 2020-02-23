@@ -1,15 +1,10 @@
 {% extends "layout.html" %}
 {% block body_content %}
     <h2>{{ current_user.first_name }} {{ current_user.last_name }}</h2>
-    <br>  
-    <form action="{{ url_for('account_delete') }}">
-        <button type="submit">Delete your account</button> 
-    </form>
-    <a href="{{ url_for('account_favourites') }}">Favourite Recipes</a>
+    <br>      
     <br>
     <h3>Update your details below</h3>
     <br>   
-    <div class='form'>
         <form method='POST' action=''>
             {{ form.hidden_tag() }}           
             <div class='form_group'>
@@ -77,4 +72,12 @@
             </div>
         </form>
     </div>
+<br>
+<br>
+<br>
+<div>
+  <form action="{{ url_for('account_delete') }}">
+        <button type="submit">Delete your account</button>
+    </form>
+</div>
 {% endblock %}

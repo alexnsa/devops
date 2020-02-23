@@ -39,7 +39,7 @@ def account():
         current_user.last_name = form.last_name.data
         current_user.email = form.email.data
         db.session.commit()
-        return redirect(url_for('account'))
+        return redirect(url_for('account_updated'))
     elif request.method == 'GET':
         form.first_name.data = current_user.first_name
         form.last_name.data = current_user.last_name
