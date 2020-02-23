@@ -14,7 +14,7 @@
 <p>The Jenkins CI Server was used to automate the test and build process. I made sure the app was working before trying the deployment to save time in potential errors.</p>
 
 <h1>Technologies/Tools Used</h1>
-<p><a href="https://www.w3schools.com/html/">Trello</a></p>
+<p><a href="https://trello.com/b/4iumgJyC/personal-sfia-project-tracking">Trello</a></p>
 <p>Google Cloud Platform</p>
 <p>MySQL</p>
 <p>Python</p>
