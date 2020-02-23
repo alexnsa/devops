@@ -1,25 +1,25 @@
 <body>
 <h1>RECIPE ROULETTE - SFIA PROJECT PART 1 - SOLO PROJECT</h1>
-
-<h1>Contents</h1>
+<p>A recipe application to help people decide what to cook for dinner.</p>
 
 <h1>Task and Solution</h1>
-
+<p>An app was needed to help resolve users' indecision around what to cook. They can choose from a recipes list, get a recipe at random, or create and manipulate a favourites list as they so wish. This application was built following the product backlog and user requirements (See the link to the Trello below, under Technologies/Tools Used) </p>
 
 <h1>Entity Relationship Diagrams</h1>
-<a img src="https://drive.google.com/open?id=1YB4Ir1ockF7pp9bBiIg6xKs18HAFpavX">
+<img src="https://i.imgur.com/sA6jOZ1.png">
+<p>Users can have an account and have a favourite recipes list. Originally there were just two tables , the Users and Recipes. I added the favourites table as I wanted Users to be able to make favourites and then access their favourite recipes quickly without going through the whole list of recipes on the app. They can also delete from their favourite recipes list if they wish.
+</p>
 
-Deployment
-The Jenkins CI Server was used to automate the test and build process. 
+<h1>Deployment</h1>
+<p>The Jenkins CI Server was used to automate the test and build process. I made sure the app was working before trying the deployment to save time in potential errors.</p>
 
-<h1>Technologies Used</h1>
+<h1>Technologies/Tools Used</h1>
+<a href="https://www.w3schools.com/html/">Trello</a>
 <p>Google Cloud Platform</p>
 <p>MySQL</p>
 <p>Python</p>
-<p>Jinja2</p>
 <p>Jenkins - CI Server</p>
 <p>Git - VCS</p>
-<p>Trello</p>
 
 <h1>Future Improvements</h1>
 <p>Make sure all user account info is deleted along with the user account. This ensures that minimal space is taken up on the database.</p>
