@@ -23,8 +23,9 @@
 <p>Git - VCS</p>
 
 <h1>Future Improvements</h1>
-<p>In coming updates, I would like to make sure all user account info is deleted along with the user account. This ensures that minimal space is taken up on the database. I would also like to promote better user security - requiring the user to make their password more secure by requiring use of upper case and lower case characters, and number/special characters when creating their password.</p>
-
+<p>In coming updates, I would like to make sure all user account info is deleted along with the user account. This ensures that minimal space is taken up on the database.</p>
+<p>I would also like to promote better user security - requiring the user to make their password more secure by requiring use of upper case and lower case characters, and number/special characters when creating their password. </p>
+<p>I also plan to add a an extra step that double checks if the user is sure that they want to delete their account when they click delete.</p>
 <h1>Alexandra Akrong</h1>
 
 </body>
