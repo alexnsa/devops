@@ -1,6 +1,6 @@
 <body>
 <h1>RECIPE ROULETTE - SFIA PROJECT PART 1 - SOLO PROJECT</h1>
-<p>A recipe application to help people decide what to cook for dinner.</p>
+<p>A recipe application to help people decide what to cook for dinner, including the choice for random recipe suggestions (recipe roulette).</p>
 
 <h1>Task and Solution</h1>
 <p>An app was needed to help resolve users' indecision around what to cook. They can choose from a recipes list, get a recipe at random, or create and manipulate a favourites list as they so wish. This application was built following the product backlog and user requirements (See the link to the Trello below, under Technologies/Tools Used) </p>
