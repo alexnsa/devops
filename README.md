@@ -1,9 +1,9 @@
 <body>
-<h1>RECIPE ROULETTE - SFIA PROJECT PART 1 - SOLO PROJECT</h1>
+<h1>RECIPE ROULETTE</h1>
 <p>A recipe application to help people decide what to cook for dinner, including the choice for random recipe suggestions (recipe roulette).</p>
 
-<h1>Task and Solution</h1>
-<p>An app was needed to help resolve users' indecision around what to cook. They can choose from a recipes list, get a recipe at random, or create and manipulate a favourites list as they so wish. This application was built following the product backlog and user requirements (See the link to the Trello below, under Technologies/Tools Used). Risk Assessment issues were also considered (see picture below). </p>
+<h1>The App</h1>
+<p>I made an app to help resolve users' indecision around what to cook. They can choose from a recipes list, get a recipe at random, or create and manipulate a favourites list as they so wish. This application was built following the product backlog and user requirements (See the link to the Trello below, under Technologies/Tools Used). Risk Assessment issues were also considered (see picture below). </p>
 <img src="https://imgur.com/BiZkoYH.png">
 
 <h1>Entity Relationship Diagrams</h1>
@@ -23,7 +23,7 @@
 <p>Git - VCS</p>
 
 <h1>Integrating Changes</h1>
-<p>As my project went on, I integrated change requests as neccesary. The project started off as a simple recipe app. However, the need arose for the users to have their favourite recipes in one place, and also be able to modify their account details themselves. Therefore, I built a Favourites feature into the app, and added functionality that enables the user to update their account details themselves. I made time for these extra features to be added, tested and built, so that the application could be delivered on time and to specification.</p> 
+<p>I integrated change requests as neccesary. It started off as a simple recipe app. However, the need arose for the users to have their favourite recipes in one place, and also be able to modify their account details themselves. Therefore, I built a Favourites feature into the app, and added functionality that enables the user to update their account details themselves. I made time for these extra features to be added, tested and built, so that the application could be delivered on time and to specification.</p> 
 
 <h1>Future Improvements</h1>
 <p>In coming updates, I would like to make sure all user account info is deleted along with the user account. This ensures that minimal space is taken up on the database.</p>
